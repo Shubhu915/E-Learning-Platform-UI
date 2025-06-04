@@ -1,0 +1,149 @@
+:root {
+  --primary-color: #4b7bec;
+  --secondary-color: #dff9fb;
+  --background-color: #f5f6fa;
+  --text-color: #2f3640;
+  --card-bg: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--secondary-color);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #3867d6;
+}
+
+.course-list {
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.course-list h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.course-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.course-card a {
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.course-card a:hover {
+  background: #3867d6;
+}
+
+footer {
+  background: #dcdde1;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
+nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
